@@ -1,25 +1,19 @@
-package com.iidooo.cms.client.action.blog;
+package com.iidooo.inaba.action.article;
 
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.cms.client.service.blog.BlogListService;
-import com.iidooo.cms.dto.extend.ChannelDto;
-import com.iidooo.cms.dto.extend.CmsContentArticleDto;
-import com.iidooo.cms.dto.extend.ContentDto;
-import com.iidooo.cms.service.IChannelService;
-import com.iidooo.cms.service.ContentService;
-import com.iidooo.framework.action.PagingActionSupport;
+import com.iidooo.core.action.BaseAction;
 
-public class BlogListAction extends PagingActionSupport {
+public class ArticleListAction extends BaseAction {
     /**
      * 
      */
     private static final long serialVersionUID = 1L;
 
-    private static final Logger logger = Logger.getLogger(BlogListAction.class);
+    private static final Logger logger = Logger.getLogger(ArticleListAction.class);
 
     @Autowired
     private IChannelService channelService;

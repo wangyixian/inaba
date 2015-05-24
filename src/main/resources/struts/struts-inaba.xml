@@ -4,32 +4,32 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="client" extends="basic">
-		<action name="index" class="iidooo.cms.client.action.index.IndexAction" method="init">
+	<package name="inaba" extends="basic">
+		<action name="index" class="com.iidooo.inaba.action.index.IndexAction" method="init">
 			<result name="success">/templates/inaba/index/Index.jsp</result>
 		</action>
-		<action name="productList" class="iidooo.cms.client.action.product.ProductListAction" method="init">
+		<action name="productList" class="com.iidooo.inaba.action.product.ProductListAction" method="init">
 			<result name="success">/templates/inaba/product/ProductList.jsp</result>
 		</action>
-		<action name="productDetail" class="iidooo.cms.client.action.product.ProductDetailAction" method="init">
+		<action name="productDetail" class="com.iidooo.inaba.action.product.ProductDetailAction" method="init">
 			<result name="success">/templates/inaba/product/ProductDetail.jsp</result>
 		</action>
-		<action name="blogList" class="iidooo.cms.client.action.blog.BlogListAction" method="init">
+		<action name="articleList" class="com.iidooo.inaba.action.article.ArticleListAction" method="init">
 			<result name="success">/templates/inaba/blog/BlogList.jsp</result>
 		</action>
-		<action name="articleDetail" class="iidooo.cms.client.action.blog.BlogDetailAction" method="init">
+		<action name="articleDetail" class="com.iidooo.inaba.action.article.ArticleDetailAction" method="init">
 			<result name="success">/templates/inaba/blog/BlogDetail.jsp</result>
 		</action>
-		<action name="aboutUs" class="iidooo.cms.client.action.about.AboutAction" method="init">
+		<action name="about" class="com.iidooo.inaba.action.about.AboutAction" method="init">
 			<result name="success">/templates/inaba/about/About.jsp</result>
 		</action>
-		<action name="contact" class="iidooo.cms.client.action.contact.ContactAction" method="init">
+		<action name="contact" class="com.iidooo.inaba.action.contact.ContactAction" method="init">
 			<result name="success">/templates/inaba/contact/Contact.jsp</result>
 		</action>
-		<action name="join" class="iidooo.cms.client.action.join.JoinAction" method="init">
+		<action name="join" class="com.iidooo.inaba.action.join.JoinAction" method="init">
 			<result name="success">/templates/inaba/join/Join.jsp</result>
 		</action>
-		<action name="recruit" class="iidooo.cms.client.action.recruit.RecruitAction" method="init">
+		<action name="recruit" class="com.iidooo.inaba.action.recruit.RecruitAction" method="init">
 			<result name="success">/templates/inaba/recruit/Recruit.jsp</result>
 		</action>
 	</package>

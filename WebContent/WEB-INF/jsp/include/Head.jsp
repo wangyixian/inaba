@@ -1,2 +1,2 @@
-<script type="text/javascript" src="${SITE_TEMPLATE_URL}/res/js/lib/jquery-1.9.1.js"></script>
-<link type="text/css" rel="stylesheet" href="${SITE_TEMPLATE_URL}/res/css/Common.css">
+<link href="${CORE_URL }/css/common.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="${CORE_URL }/js/jquery-ui-1.10.3/js/jquery-1.9.1.min.js"></script>

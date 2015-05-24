@@ -1,4 +1,4 @@
-package com.iidooo.cms.client.action.product;
+package com.iidooo.inaba.action.product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,17 +6,12 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.cms.client.service.product.ProductListService;
-import com.iidooo.cms.dto.extend.ChannelDto;
-import com.iidooo.cms.dto.extend.ContentProductDto;
-import com.iidooo.cms.service.IChannelService;
-import com.iidooo.cms.service.ContentService;
-import com.iidooo.framework.action.PagingActionSupport;
-import com.iidooo.framework.constant.DictConstant;
-import com.iidooo.framework.dto.extend.DictItemDto;
-import com.iidooo.framework.service.DictItemService;
+import com.iidooo.core.action.BaseAction;
+import com.iidooo.core.api.service.impl.DictItemService;
+import com.iidooo.core.dto.extend.DictItemDto;
+import com.iidooo.inaba.service.product.ProductListService;
 
-public class ProductListAction extends PagingActionSupport {
+public class ProductListAction extends BaseAction {
     /**
      * 
      */

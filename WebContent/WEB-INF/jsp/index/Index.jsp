@@ -7,13 +7,13 @@
 <meta name="keywords" content="${channel.metaKeywords}" >
 <meta name="description" content="${channel.metaDescription}">
 <jsp:include page="../include/Head.jsp"></jsp:include>
-<link type="text/css" rel="stylesheet" href="${SITE_TEMPLATE_URL}/res/css/index/Index.css">
+<link type="text/css" rel="stylesheet" href="/css/index/Index.css">
 </head>
 <body>
 	<jsp:include page="../include/Top.jsp"></jsp:include>
-	<div id="index" class="body_wrap">	
-		<cms:mainmenu channelPath="index" />
-    	<div id="banner" class="banner"><img src="${SITE_TEMPLATE_URL}/res/img/index/banner.png"></div>
+	<div id="index" class="page_content_wrap_980px">	
+		<cms:channelMenu siteCode="inaba" channelPath="index" />
+    	<div id="banner" class="banner"><img src="/img/index/banner.png"></div>
     	<div>
 			<div class="left_block_wrap">
 				<div id="nominate" class="block">

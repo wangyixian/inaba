@@ -1,18 +1,14 @@
-package com.iidooo.cms.client.action.index;
+package com.iidooo.inaba.action.index;
 
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.cms.client.action.CmsBaseAction;
-import com.iidooo.cms.dto.extend.CmsContentArticleDto;
-import com.iidooo.cms.dto.extend.ContentDto;
-import com.iidooo.cms.dto.extend.ContentProductDto;
-import com.iidooo.cms.service.ContentProductService;
-import com.iidooo.cms.service.ContentService;
+import com.iidooo.core.action.BaseAction;
 
-public class IndexAction extends CmsBaseAction {
+public class IndexAction extends BaseAction {
+    
     /**
      * 
      */

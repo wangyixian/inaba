@@ -1,20 +1,17 @@
-package com.iidooo.cms.client.action.blog;
+package com.iidooo.inaba.action.article;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.cms.client.action.product.ProductDetailAction;
-import com.iidooo.cms.dto.extend.CmsContentArticleDto;
-import com.iidooo.cms.service.ContentArticleService;
-import com.iidooo.framework.action.BaseAction;
+import com.iidooo.core.action.BaseAction;
 
-public class BlogDetailAction extends BaseAction {
+public class ArticleDetailAction extends BaseAction {
     /**
      * 
      */
     private static final long serialVersionUID = 1L;
 
-    private static final Logger logger = Logger.getLogger(BlogDetailAction.class);
+    private static final Logger logger = Logger.getLogger(ArticleDetailAction.class);
 
     @Autowired
     private ContentArticleService contentArticleService;

@@ -1,15 +1,11 @@
-package com.iidooo.cms.client.action.recruit;
+package com.iidooo.inaba.action.recruit;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.cms.client.action.CmsBaseAction;
-import com.iidooo.cms.dto.extend.ChannelDto;
-import com.iidooo.cms.dto.extend.ContentDto;
-import com.iidooo.cms.service.IChannelService;
-import com.iidooo.cms.service.ContentService;
+import com.iidooo.core.action.BaseAction;
 
-public class RecruitAction extends CmsBaseAction {
+public class RecruitAction extends BaseAction {
 
     /**
      * 
