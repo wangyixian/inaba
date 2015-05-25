@@ -24,7 +24,7 @@
 						<ul class="slideul1"> 
 							<li class="slideli1"> 								
 		    					<ul class="slideul2">
-									<cms:contentList channelPath="nominate" action='productDetail' isShowImage="true"/>
+									<cms:contentList siteCode="inaba" channelPath="nominate" action='productDetail' isShowImage="true"/>
 		    					</ul>
     						</li>
     						<li class="slideli2"></li> 
@@ -39,7 +39,7 @@
 					</div>
 					<div class="block_content">					
     					<ul>
-    						<cms:contentList channelPath='news' action='articleDetail' isShowDate='true' sortField='UpdateTime' sortType='desc' pageStart='0' pageSize='10'/>
+    						<cms:contentList siteCode="inaba" channelPath='news' action='articleDetail' isShowDate='true' sortField='UpdateTime' sortType='desc' pageStart='0' pageSize='10'/>
     					</ul>
 					</div>
 				</div>				
@@ -57,7 +57,7 @@
     				</div>
     				<div class="block_content">
     					<ul class="product_list">
-							<cms:contentList channelPath="sales" action='productDetail' isShowImage="true" pageStart='0' pageSize='8' />
+							<cms:contentList siteCode="inaba" channelPath="sales" action='productDetail' isShowImage="true" pageStart='0' pageSize='8' />
     					</ul>
     				</div>
     			</div>
