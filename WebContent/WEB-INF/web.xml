@@ -66,8 +66,8 @@
 		<listener-class>com.iidooo.inaba.listener.ApplicationListener</listener-class>
 	</listener>
 	<context-param>
-		<param-name>CORE_URL</param-name>
-		<param-value>http://localhost:8080/core</param-value>
+		<param-name>CMS_URL</param-name>
+		<param-value>http://localhost:8080/cms</param-value>
 	</context-param>
 
 	<session-config>

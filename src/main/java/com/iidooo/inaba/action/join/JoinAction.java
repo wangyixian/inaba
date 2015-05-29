@@ -1,11 +1,11 @@
 package com.iidooo.inaba.action.join;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.core.action.BaseAction;
+import com.iidooo.cms.api.action.SiteSupportAction;
+import com.iidooo.inaba.constant.InabaConstant;
 
-public class JoinAction extends BaseAction {
+public class JoinAction extends SiteSupportAction {
 
     /**
      * 
@@ -14,36 +14,12 @@ public class JoinAction extends BaseAction {
 
     private static final Logger logger = Logger.getLogger(JoinAction.class);
 
-    @Autowired
-    private IChannelService channelService;
-
-    @Autowired
-    private ContentService contentService;
-
-    private ChannelDto channel;
-
-    private ContentDto content;
-
-    public ChannelDto getChannel() {
-        return channel;
-    }
-
-    public void setChannel(ChannelDto channel) {
-        this.channel = channel;
-    }
-
-    public ContentDto getContent() {
-        return content;
-    }
-
-    public void setContent(ContentDto content) {
-        this.content = content;
-    }
-
     public String init() {
         try {
-            this.channel = channelService.getChannelByID(channel.getChannelID());
-            this.content = contentService.getContentByChannel(channel.getChannelID());
+            
+            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
+            this.sendGetContentAPI(this.getContent().getContentID());
+
             return SUCCESS;
         } catch (Exception e) {
             e.printStackTrace();

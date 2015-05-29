@@ -2,10 +2,11 @@ package com.iidooo.inaba.action.index;
 
 import org.apache.log4j.Logger;
 
-import com.iidooo.cms.action.FrontBaseAction;
+import com.iidooo.cms.api.action.SiteSupportAction;
+import com.iidooo.inaba.constant.InabaConstant;
 
-public class IndexAction extends FrontBaseAction {
-    
+public class IndexAction extends SiteSupportAction {
+
     /**
      * 
      */
@@ -13,9 +14,11 @@ public class IndexAction extends FrontBaseAction {
 
     private static final Logger logger = Logger.getLogger(IndexAction.class);
 
-    
     public String init() {
         try {
+
+            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
+
             return SUCCESS;
         } catch (Exception e) {
             e.printStackTrace();
@@ -23,4 +26,5 @@ public class IndexAction extends FrontBaseAction {
             return ERROR;
         }
     }
+
 }
