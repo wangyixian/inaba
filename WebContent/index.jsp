@@ -3,6 +3,5 @@
 <html>
 <meta http-equiv="refresh" content="0;URL=index.action" content="text/html; charset=utf-8">
 <body>
-	<h2>Redirecting......</h2>
 </body>
 </html>

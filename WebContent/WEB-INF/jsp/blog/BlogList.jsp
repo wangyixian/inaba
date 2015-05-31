@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib prefix="cms" uri="/cms-tags"%>
+<%@ taglib prefix="cms" uri="/cms-api-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,11 +15,11 @@
 		<input id="hidChannelID" type="hidden" name="channel.channelID" value="${channel.channelID }">
 		<jsp:include page="../include/Top.jsp"></jsp:include>
 	    <div id="news" class="body_wrap">
-	    	<cms:mainmenu channelPath="blogList" />
+	    	<cms:channelMenu  siteCode="inaba" channelPath="blogList" />
 	    	<div class="left_block_wrap">
-	    		<cms:contentListBlock id="articles" title="热门文章" channelPath="blog" action="articleDetail.action" isShowDate='true' />
-	    		<cms:contentListBlock id="news" title="热点新闻" channelPath="news" action="articleDetail.action" isShowDate='true' />
-	    		<cms:contentListBlock id="konwledge" title="葡萄酒知识" channelPath="konwledge" action="articleDetail.action" isShowDate='true' />
+	    		<cms:contentListBlock  siteCode="inaba" id="articles" title="热门文章" channelPath="blog" action="articleDetail.action" isShowDate='true' />
+	    		<cms:contentListBlock  siteCode="inaba" id="news" title="热点新闻" channelPath="news" action="articleDetail.action" isShowDate='true' />
+	    		<cms:contentListBlock  siteCode="inaba" id="konwledge" title="葡萄酒知识" channelPath="konwledge" action="articleDetail.action" isShowDate='true' />
 	    	</div>
 	    	<div class="right_block_wrap">
 	    		<div class="block">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-	<display-name>cms</display-name>
+	<display-name>inaba</display-name>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
@@ -76,12 +76,8 @@
 
 	<jsp-config>
 		<taglib>
-			<taglib-uri>/cms-tags</taglib-uri>
-			<taglib-location>/WEB-INF/tlds/cms-tags.tld</taglib-location>
-		</taglib>
-		<taglib>
-			<taglib-uri>/core-tags</taglib-uri>
-			<taglib-location>/WEB-INF/tlds/core-tags.tld</taglib-location>
+			<taglib-uri>/cms-api-tags</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/cms-api-tags.tld</taglib-location>
 		</taglib>
 	</jsp-config>
 </web-app>

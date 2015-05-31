@@ -1,11 +1,11 @@
 package com.iidooo.inaba.action.article;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.iidooo.core.action.BaseAction;
+import com.iidooo.cms.api.action.SiteSupportAction;
+import com.iidooo.inaba.constant.InabaConstant;
 
-public class ArticleDetailAction extends BaseAction {
+public class ArticleDetailAction extends SiteSupportAction {
     /**
      * 
      */
@@ -13,22 +13,10 @@ public class ArticleDetailAction extends BaseAction {
 
     private static final Logger logger = Logger.getLogger(ArticleDetailAction.class);
 
-    @Autowired
-    private ContentArticleService contentArticleService;
-
-    private CmsContentArticleDto content;
-
-    public CmsContentArticleDto getContent() {
-        return content;
-    }
-
-    public void setContent(CmsContentArticleDto content) {
-        this.content = content;
-    }
-
     public String init() {
         try {
-            content = contentArticleService.getContentByID(content.getContentID());
+            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
+            this.sendGetContentAPI(this.getContent().getContentID());
             return SUCCESS;
         } catch (Exception e) {
             e.printStackTrace();
