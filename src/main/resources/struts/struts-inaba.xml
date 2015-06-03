@@ -5,9 +5,9 @@
 
 <struts>
 	<package name="inaba" extends="basic">
-		<action name="index" class="com.iidooo.inaba.action.index.IndexAction" method="init">
+		<!-- <action name="index" class="com.iidooo.inaba.action.index.IndexAction" method="init">
 			<result name="success">/templates/inaba/index/Index.jsp</result>
-		</action>
+		</action> -->
 		<action name="productList" class="com.iidooo.inaba.action.product.ProductListAction" method="init">
 			<result name="success">/templates/inaba/product/ProductList.jsp</result>
 		</action>

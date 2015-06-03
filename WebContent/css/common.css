@@ -266,7 +266,7 @@ a:hover {
 }
 
 /* 网页内容部分的包裹 */
-.body_wrap {
+.page_content_wrap {
 	width: 980px;
 	margin-right: auto;
 	margin-left: auto;
@@ -284,7 +284,7 @@ a:hover {
 }
 
 /* 顶部 */
-#top {
+.top_wrap {
 	width: 100%;
 	border-color: #666;
 	background: black;
@@ -314,7 +314,7 @@ a:hover {
 }
 
 /* 主菜单 */
-#mainmenu {
+.channel_menu {
 	background-color: RGB(82, 38, 59);
 	height: 40px;
 	margin: 10px 0px 0px 0px;
@@ -322,7 +322,7 @@ a:hover {
 	color: white;
 }
 
-#mainmenu>li {
+.channel_menu>li {
 	width: 100px;
 	height: 40px;
 	line-height: 40px;
@@ -334,12 +334,12 @@ a:hover {
 }
 
 /* 主菜单的超链接效果 */
-#mainmenu>li>a {
+.channel_menu>li>a {
 	color: white;
 	display: block;
 }
 
-#mainmenu>li>a:hover {
+.channel_menu>li>a:hover {
 	background-color: RGB(150, 38, 59);
 	font-weight: bold;
 }

@@ -63,7 +63,7 @@
 
 	<!-- The listener of this application. Append the configuration of application need. -->
 	<listener>
-		<listener-class>com.iidooo.inaba.listener.ApplicationListener</listener-class>
+		<listener-class>com.iidooo.cms.listener.ApplicationListener</listener-class>
 	</listener>
 	<context-param>
 		<param-name>CMS_URL</param-name>
