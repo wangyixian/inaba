@@ -16,9 +16,7 @@ public class ContactAction extends SiteSupportAction {
 
     public String init() {
         try {
-            
-            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
-            this.sendGetContentAPI(this.getContent().getContentID());
+            this.sendGetContentAPI(InabaConstant.SITE_CODE, this.getActionName());
 
             return SUCCESS;
         } catch (Exception e) {

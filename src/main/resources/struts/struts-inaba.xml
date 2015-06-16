@@ -6,28 +6,28 @@
 <struts>
 	<package name="inaba" extends="basic">
 		<action name="productList" class="com.iidooo.inaba.action.product.ProductListAction" method="init">
-			<result name="success">/templates/inaba/product/ProductList.jsp</result>
+			<result name="success">/page/product/ProductList.jsp</result>
 		</action>
 		<action name="productDetail" class="com.iidooo.inaba.action.product.ProductDetailAction" method="init">
-			<result name="success">/templates/inaba/product/ProductDetail.jsp</result>
+			<result name="success">/page/product/ProductDetail.jsp</result>
 		</action>
 		<action name="articleList" class="com.iidooo.inaba.action.article.ArticleListAction" method="init">
-			<result name="success">/templates/inaba/blog/BlogList.jsp</result>
+			<result name="success">/page/article/ArticleList.jsp</result>
 		</action>
 		<action name="articleDetail" class="com.iidooo.inaba.action.article.ArticleDetailAction" method="init">
-			<result name="success">/templates/inaba/blog/BlogDetail.jsp</result>
+			<result name="success">/page/article/ArticleDetail.jsp</result>
 		</action>
 		<action name="about" class="com.iidooo.inaba.action.about.AboutAction" method="init">
-			<result name="success">/templates/inaba/about/About.jsp</result>
+			<result name="success">/page/about/About.jsp</result>
 		</action>
 		<action name="contact" class="com.iidooo.inaba.action.contact.ContactAction" method="init">
-			<result name="success">/templates/inaba/contact/Contact.jsp</result>
+			<result name="success">/page/contact/Contact.jsp</result>
 		</action>
 		<action name="join" class="com.iidooo.inaba.action.join.JoinAction" method="init">
-			<result name="success">/templates/inaba/join/Join.jsp</result>
+			<result name="success">/page/join/Join.jsp</result>
 		</action>
 		<action name="recruit" class="com.iidooo.inaba.action.recruit.RecruitAction" method="init">
-			<result name="success">/templates/inaba/recruit/Recruit.jsp</result>
+			<result name="success">/page/recruit/Recruit.jsp</result>
 		</action>
 	</package>
 </struts>

@@ -23,7 +23,7 @@
 						<ul class="slideul1"> 
 							<li class="slideli1"> 								
 		    					<ul class="slideul2">
-									<cms:contentList siteCode="inaba" channelPath="products" action='productDetail' isShowImage="true" sortField="UniqueVisitor" sortType="desc"/>
+									<cms:contentList siteCode="inaba" channelPath="productList" action='productDetail' isShowImage="true" sortField="UniqueVisitor" sortType="desc"/>
 		    					</ul>
     						</li>
     						<li class="slideli2"></li> 
@@ -56,7 +56,7 @@
     				</div>
     				<div class="block_content">
     					<ul class="product_list">
-							<cms:contentList siteCode="inaba" channelPath="products" action='productDetail' isShowImage="true" pageStart='0' pageSize='8' sortField="PageViewed" sortType="desc"/>
+							<cms:contentList siteCode="inaba" channelPath="productList" action='productDetail' isShowImage="true" pageStart='0' pageSize='8' sortField="PageViewed" sortType="desc"/>
     					</ul>
     				</div>
     			</div>

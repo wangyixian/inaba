@@ -5,25 +5,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="keywords" content="${channel.metaKeywords}" >
-<meta name="description" content="${channel.metaDescription}">
 <jsp:include page="../include/Head.jsp"></jsp:include>
-<link type="text/css" rel="stylesheet" href="${SITE_TEMPLATE_URL}/res/css/join/Join.css">
+<link type="text/css" rel="stylesheet" href="/inaba/css/join/Join.css">
+<cms:metaInfo siteCode="inaba" channelPath="join" />
 </head>
 <body>
-	<input id="hidChannelID" type="hidden" name="channel.channelID" value="${channel.channelID }">
 	<jsp:include page="../include/Top.jsp"></jsp:include>
-	<div class="body_wrap">		
+	<div class="page_content_wrap">		
     	<cms:channelMenu siteCode="inaba" channelPath="join" />
-	</div>
-	<div class="body_wrap block shadow">
 		<div class="content_wrap">
 			<div class="content align_center">
 				<h1>${content.contentTitle }</h1>
 				<hr class="hr"></hr>
 				<hr size="2" width="100%">
 				<div>
-					<img class="logo_square" alt="${SITE_NAME}" src="${SITE_TEMPLATE_URL}/res/img/logo_square.jpg"><br>
+					<img class="logo_square" src="/inaba/img/logo_square.jpg"><br>
 				</div>
 			</div>
 			<div class="content">
