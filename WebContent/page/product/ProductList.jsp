@@ -29,9 +29,9 @@
 </head>
 <body>
 	<form id="form" action="productList" method="post">
-		<input id="hidProductCountry" type="hidden" name="product.productCountry" value="${product.productCountry }">
-	    <input id="hidProductOrigin" type="hidden" name="product.productOrigin" value="${product.productOrigin }">
-	    <input id="hidProductType" type="hidden" name="product.channelPath" value="${product.channelPath }">
+		<input id="hidProductCountry" type="hidden" name="product.productCountry" value="${product.productCountry}">
+	    <input id="hidProductOrigin" type="hidden" name="product.productOrigin" value="${product.productOrigin}">
+	    <input id="hidProductType" type="hidden" name="product.channelPath" value="${product.channelPath}">
 	    
 		<jsp:include page="../include/Top.jsp"></jsp:include>
 	    <div class="page_content_wrap">	    	
@@ -41,7 +41,7 @@
 		    		<dt>国家：</dt>
 		    		<dd>
 		    			<div>
-		    				<core:dictItemList id="productCountry" value="product.productCountry" dictClassCode="DICT_CLASS_INABA_COUNTRY" onClick="searchByCountry(dictItemCode)"/>
+		    				<core:dictItemList id="productCountry" value="${product.productCountry}" dictClassCode="DICT_CLASS_INABA_COUNTRY" onClick="searchByCountry('dictItemCode')"/>
 		    			</div>
 		    		</dd>
 		    	</dl>	
@@ -49,7 +49,7 @@
 		    		<dt>产地：</dt>
 		    		<dd>
 		    			<div>
-		    				<core:dictItemList id="productOrigin" value="product.productOrigin" dictClassCode="DICT_CLASS_INABA_ORIGIN" onClick="searchByOrigin(dictItemCode)"/>
+		    				<core:dictItemList id="productOrigin" value="${product.productOrigin}" dictClassCode="DICT_CLASS_INABA_ORIGIN" onClick="searchByOrigin('dictItemCode')"/>
 		    			</div>
 		    		</dd>
 		    	</dl>	
@@ -57,7 +57,7 @@
 		    		<dt>分类：</dt>
 		    		<dd>
 		    			<div>		    				
-							<cms:channelList siteCode="inaba" parentPath="productList" id="productList" value="product.productType" onClick="searchByType(channelID)"/>
+							<cms:channelList siteCode="inaba" parentPath="productList" id="productList" value="${product.channelPath}" onClick="searchByType('channelPath')"/>
 		    			</div>
 		    		</dd>
 		    	</dl>    	
