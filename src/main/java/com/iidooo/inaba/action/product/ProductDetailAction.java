@@ -3,7 +3,6 @@ package com.iidooo.inaba.action.product;
 import org.apache.log4j.Logger;
 
 import com.iidooo.cms.api.action.SiteSupportAction;
-import com.iidooo.inaba.constant.InabaConstant;
 
 public class ProductDetailAction extends SiteSupportAction {
     /**
@@ -15,7 +14,6 @@ public class ProductDetailAction extends SiteSupportAction {
 
     public String init() {
         try {
-            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
             this.sendGetContentProductAPI(this.getContent().getContentID());
             return SUCCESS;
         } catch (Exception e) {

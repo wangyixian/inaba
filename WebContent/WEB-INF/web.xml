@@ -76,6 +76,10 @@
 
 	<jsp-config>
 		<taglib>
+			<taglib-uri>/core-api-tags</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/core-api-tags.tld</taglib-location>
+		</taglib>
+		<taglib>
 			<taglib-uri>/cms-api-tags</taglib-uri>
 			<taglib-location>/WEB-INF/tlds/cms-api-tags.tld</taglib-location>
 		</taglib>

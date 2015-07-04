@@ -3,7 +3,6 @@ package com.iidooo.inaba.action.article;
 import org.apache.log4j.Logger;
 
 import com.iidooo.cms.api.action.SiteSupportAction;
-import com.iidooo.inaba.constant.InabaConstant;
 
 public class ArticleDetailAction extends SiteSupportAction {
     /**
@@ -15,7 +14,6 @@ public class ArticleDetailAction extends SiteSupportAction {
 
     public String init() {
         try {
-            this.sendGetChannelAPI(InabaConstant.SITE_CODE, this.getChannel().getChannelPath());
             this.sendGetContentAPI(this.getContent().getContentID());
             return SUCCESS;
         } catch (Exception e) {

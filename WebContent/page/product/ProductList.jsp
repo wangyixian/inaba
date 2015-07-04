@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="core" uri="/core-api-tags"%>
 <%@ taglib prefix="cms" uri="/cms-api-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="keywords" content="${channel.metaKeywords}" >
-<meta name="description" content="${channel.metaDescription}">
 <jsp:include page="../include/Head.jsp"></jsp:include>
-<link type="text/css" rel="stylesheet" href="${SITE_TEMPLATE_URL}/res/css/product/ProductList.css">
+<link type="text/css" rel="stylesheet" href="/inaba/css/product/ProductList.css">
+<cms:metaInfo siteCode="inaba" channelPath="productList" />
+
 <script type="text/javascript">
 	function searchByCountry(productCountry){
 		$("#hidProductCountry").val(productCountry);
@@ -30,31 +31,17 @@
 	<form id="form" action="productList" method="post">
 		<input id="hidProductCountry" type="hidden" name="product.productCountry" value="${product.productCountry }">
 	    <input id="hidProductOrigin" type="hidden" name="product.productOrigin" value="${product.productOrigin }">
-	    <input id="hidProductType" type="hidden" name="product.productType" value="${product.productType }">
-	    <input type="hidden" name="channel.channelID" value="${channel.channelID }">
+	    <input id="hidProductType" type="hidden" name="product.channelPath" value="${product.channelPath }">
 	    
 		<jsp:include page="../include/Top.jsp"></jsp:include>
-	    <div class="body_wrap">	    	
+	    <div class="page_content_wrap">	    	
 	    	<cms:channelMenu siteCode="inaba" channelPath="productList" />
 	    	<div id="classify" class="block frame">
 		    	<dl>
 		    		<dt>国家：</dt>
 		    		<dd>
 		    			<div>
-		    			<s:if test="product.productCountry <= 0">	    			
-		    				<a href="#" class="focus" onclick="searchByCountry(0)">全部</a>
-		    			</s:if>
-		    			<s:else>
-		    				<a href="#" onclick="searchByCountry(0)">全部</a>	    			
-		    			</s:else>
-		    			<s:iterator value="productCountries" status="st" id="item">	
-			    			<s:if test="product.productCountry == #item.dictItemCode">	       			
-				    			<a href="#" class="focus" onclick="searchByCountry(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:if>
-				    		<s:else>
-				    			<a href="#" onclick="searchByCountry(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:else>
-		    			</s:iterator>
+		    				<core:dictItemList id="productCountry" value="product.productCountry" dictClassCode="DICT_CLASS_INABA_COUNTRY" onClick="searchByCountry(dictItemCode)"/>
 		    			</div>
 		    		</dd>
 		    	</dl>	
@@ -62,48 +49,22 @@
 		    		<dt>产地：</dt>
 		    		<dd>
 		    			<div>
-		    			<s:if test="product.productOrigin <= 0">	    			
-		    				<a href="#" class="focus" onclick="searchByOrigin(0)">全部</a>
-		    			</s:if>
-		    			<s:else>
-		    				<a href="#" onclick="searchByOrigin(0)">全部</a>
-		    			</s:else>
-		    			<s:iterator value="productOrigins" status="st" id="item">	
-			    			<s:if test="product.productOrigin == #item.dictItemCode">	       			
-				    			<a href="#" class="focus" onclick="searchByOrigin(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:if>
-		    				<s:else>
-				    			<a href="#" onclick="searchByOrigin(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:else>
-		    			</s:iterator>
+		    				<core:dictItemList id="productOrigin" value="product.productOrigin" dictClassCode="DICT_CLASS_INABA_ORIGIN" onClick="searchByOrigin(dictItemCode)"/>
 		    			</div>
 		    		</dd>
 		    	</dl>	
 		    	<dl>
 		    		<dt>分类：</dt>
 		    		<dd>
-		    			<div>
-		    			<s:if test="product.productType<= 0">	    			
-		    				<a href="#" class="focus" onclick="searchByType(0)">全部</a>
-		    			</s:if>
-		    			<s:else>
-		    				<a href="#" onclick="searchByType(0)">全部</a>
-		    			</s:else>
-		    			<s:iterator value="productTypes" status="st" id="item">	
-			    			<s:if test="product.productType == #item.dictItemCode">	       			
-				    			<a href="#" class="focus" onclick="searchByType(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:if>
-		    				<s:else>
-				    			<a href="#" onclick="searchByType(${item.dictItemCode})">${item.dictItemName}</a>
-				    		</s:else>
-		    			</s:iterator>
+		    			<div>		    				
+							<cms:channelList siteCode="inaba" parentPath="productList" id="productList" value="product.productType" onClick="searchByType(channelID)"/>
 		    			</div>
 		    		</dd>
 		    	</dl>    	
 	    	</div>
 			<div id="products" class="block">
 				<ul>
-					<s:iterator value="products" status="st" id="item">	
+					<s:iterator value="productList" status="st" id="item">	
 					<li class="left">
 						<div>
 							<a href="productDetail.action?content.contentID=${item.contentID }" target="_blank">
