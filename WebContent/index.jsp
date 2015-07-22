@@ -15,21 +15,7 @@
     	<div id="banner" class="banner"><img src="/inaba/img/index/banner.png"></div>
     	<div>
 			<div class="left_block_wrap">
-				<div id="nominate" class="block">
-					<div class="block_title">
-						<a class="main_title">精品展示</a>
-					</div>
-					<div id="slide" class="block_content">
-						<ul class="slideul1"> 
-							<li class="slideli1"> 								
-		    					<ul class="slideul2">
-									<cms:contentList siteCode="inaba" channelPath="productList" action='productDetail' isShowImage="true" sortField="UniqueVisitor" sortType="desc"/>
-		    					</ul>
-    						</li>
-    						<li class="slideli2"></li> 
-    					</ul>
-					</div>
-				</div>
+				<cms:contentSlideBlock siteCode="inaba" channelPath="productList" action="productDetail" title="精品展示" id="nominate" pageSize="5" sortField="UniqueVisitor"/>
 			</div>
 			<div class="right_block_wrap">
 				<div id="info" class="block">
@@ -66,5 +52,5 @@
     <jsp:include page="page/include/Footer.jsp"></jsp:include>
 </body>
 
-<script type="text/javascript" src="/inaba/js/scroll.js"></script>
+<script type="text/javascript" src="${CMS_URL }/js/slide_scroll.js"></script>
 </html>
