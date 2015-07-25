@@ -22,7 +22,7 @@
 	height: 37px;
 }
 
-#nominate .main_title {
+#nominate .block_title_main {
 	background: url(../../img/index/mainpage.png);
 	background-position: -180px -560px;
 	color: #C1272D;
@@ -49,12 +49,14 @@
 }
 
 #sales .block_title {
-	border: 1px solid #CCC;
+	border-bottom: 2px solid #C1272D;
 	background: white;
 	height: 37px;
 }
 
 #sales .block_content_item{	
+	
+	margin-left: 10px;
 	width: 220px;
 	height: 280px;
 	text-align: center;
@@ -68,7 +70,7 @@
 	text-align: center;
 }
 
-.product_list li {
+#sales .block_content li {
 	float: left;
 	margin-top: 10px;
 	width: 243px;
@@ -83,25 +85,18 @@
 	width: 100%;
 }
 
-#sales .main_title {
+#sales .block_title_main {
 	background: url(../../img/index/mainpage.png);
-	background-position: -148px -753px;
+	background-position: -148px -760px;
 	color: #C1272D;
-	position: absolute;
 	font-size: 21px;
 	padding: 0 20px 0 30px;
 	text-align: center;
 	line-height: 37px;
 	text-transform: uppercase;
-	border-right: 1px solid #CCC;
 	white-space: nowrap;
-	line-height: 37px;
 }
 
-#sales .block_content {
-	border-right: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-}
 
 #slide li {
 	float: left;
@@ -118,7 +113,7 @@
 }
 
 
-#info .main_title {
+#info .block_title_main {
 	font-size: 21px;
 	text-align: center;
 	line-height: 37px;

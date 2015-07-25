@@ -7,6 +7,7 @@
 		//alert(actionName);
 		//alert(page);
 		
+		// Because paging is form post，the action url could not contain any parameters.
 		if(page <= 0 || page > pageSum || actionName == ""){
 			return;
 		}
@@ -14,8 +15,9 @@
 		// Set the current page then submit to action, do the paging operation.
 		$("#hidCurrentPage").val(page);
 		
-		window.form.action=actionName + ".action";
-		window.form.submit();
+		var $form = $("form");
+		$form.attr("action",actionName+".action");
+		$form.submit();		
 	}	
 	
 	function jump(){
@@ -24,18 +26,19 @@
 	}
 </script>
 <div class="paging block align_center">
-	<input type="button" value="首页" onclick="paging(1)"/> 
-	<input type="button" value="前一页" onclick="paging(${pagingDto.currentPage - 1})"/> 
-	<span> ${pagingDto.currentPage }/${pagingDto.pageSum }页&nbsp;${pagingDto.recordSum }件
+	<button type="button" value="首页" onclick="paging(1)">首页</button>
+	<button type="button" value="前一页" onclick="paging(${page.currentPage - 1})">前一页</button>
+	<span> ${page.currentPage }/${page.pageSum }页&nbsp;${page.recordSum }件
 	</span>
-	<input type="button" value="后一页" onclick="paging(${pagingDto.currentPage + 1})"/>
-	<input type="button" value="末页" onclick="paging(${pagingDto.pageSum})"/>	
+	<button type="button" value="后一页" onclick="paging(${page.currentPage + 1})">后一页</button>
+	<button type="button" value="末页" onclick="paging(${page.pageSum})">末页</button>
 	&nbsp;&nbsp;第&nbsp;
-	<input id="txtJumpPage" type="text" class="width_20"/>
+	<input id="txtJumpPage" type="text"/>
 	&nbsp;页
-	<input type="button" value="跳转" onclick="jump()"/>
+	<button type="button" value="跳转" onclick="jump()">跳转</button>
 
-	<input id="hidCurrentPage" type="hidden" name="pagingDto.currentPage" value="${pagingDto.currentPage }">
+	<input id="hidCurrentPage" type="hidden" name="page.currentPage" value="${page.currentPage}">
+	<input id="hidPageSize" type="hidden" name="page.pageSize" value="${page.pageSize}">
 	<input id="hidActionName" type="hidden" value="${actionName }">
-	<input id="hidPageSum" type="hidden" value="${pagingDto.pageSum}">
+	<input id="hidPageSum" type="hidden" value="${page.pageSum}">
 </div>

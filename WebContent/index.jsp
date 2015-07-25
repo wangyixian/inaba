@@ -15,42 +15,19 @@
     	<div id="banner" class="banner"><img src="/inaba/img/index/banner.png"></div>
     	<div>
 			<div class="left_block_wrap">
-				<cms:contentSlideBlock siteCode="inaba" channelPath="productList" action="productDetail" title="精品展示" id="nominate" pageSize="5" sortField="UniqueVisitor"/>
+				<cms:contentSlideBlock siteCode="inaba" channelPath="productList" action="productDetail" title="精品展示" id="nominate"/>
 			</div>
 			<div class="right_block_wrap">
-				<div id="info" class="block">
-					<div class="block_title">
-						<a class="main_title">最新资讯</a>
-					</div>
-					<div class="block_content">					
-    					<ul>
-    						<cms:contentList siteCode="inaba" channelPath='news' action='articleDetail' isShowDate='true' sortField='UpdateTime' sortType='desc' pageStart='0' pageSize='10'/>
-    					</ul>
-					</div>
-				</div>				
+				<cms:contentListBlock id="info" action="articleDetail" siteCode="inaba" channelPath="articleList" title="最新资讯" isShowDate='true' />
 			</div>
 		</div>
 		<div>
     		<div>
-    			<div id="sales" class="block">
-    				<div class="block_title">
-    					<a class="main_title">
-    						热销红酒
-    						<span class="mark_top"></span>
-    						<span class="mark_bottom"></span>
-    					</a>
-    				</div>
-    				<div class="block_content">
-    					<ul class="product_list">
-							<cms:contentList siteCode="inaba" channelPath="productList" action='productDetail' isShowImage="true" pageStart='0' pageSize='8' sortField="PageViewed" sortType="desc"/>
-    					</ul>
-    				</div>
-    			</div>
+    			<cms:contentListBlock id="sales" action="productDetail" siteCode="inaba" channelPath="productList" title="热销红酒" isShowImage="true" pageSize='8' sortField="PageViewed"/>
     		</div>
     	</div>
 	</div>
     <jsp:include page="page/include/Footer.jsp"></jsp:include>
 </body>
 
-<script type="text/javascript" src="${CMS_URL }/js/slide_scroll.js"></script>
 </html>

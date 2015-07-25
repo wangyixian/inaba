@@ -345,7 +345,7 @@ a:hover {
 	font-weight: bold;
 }
 
-.focus {
+.channel_menu .focus {
 	background-color: RGB(150, 38, 59);
 	font-weight: bold;
 	color: white;

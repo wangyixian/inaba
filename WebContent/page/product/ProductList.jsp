@@ -13,17 +13,17 @@
 <script type="text/javascript">
 	function searchByCountry(productCountry){
 		$("#hidProductCountry").val(productCountry);
-		window.form.submit();
+		$("form").submit();
 	}
 	
 	function searchByOrigin(productOrigin){
 		$("#hidProductOrigin").val(productOrigin);
-		window.form.submit();
+		$("form").submit();
 	}
 	
 	function searchByType(productType){
 		$("#hidProductType").val(productType);
-		window.form.submit();
+		$("form").submit();
 	}
 </script>
 </head>

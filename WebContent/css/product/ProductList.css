@@ -40,6 +40,12 @@
 	border-left: 1px solid transparent;
 }
 
+#classify .focus{	
+	color: white;
+	background-color: #BF1C21;
+	border-left: 1px solid transparent;
+}
+
 #classify li {
 	float: left;
 	padding: 0 5px;
