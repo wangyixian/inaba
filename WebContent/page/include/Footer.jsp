@@ -4,11 +4,11 @@
 		<div class="align_center">
 			<div class="left">
 				<dl class="align_left">
-					<dt>关于我们</dt>
+					<dt><a href="about">关于我们</a></dt>
 					<dd>INABA简介</dd>
 					<dd>INABA优势</dd>
-					<dd>联系我们</dd>
-					<dd>诚聘英才</dd>
+					<dd><a href="contact">联系我们</a></dd>
+					<dd><a href="join">诚聘英才</a></dd>
 				</dl>
 			</div>
 			<div class="left">
@@ -17,7 +17,7 @@
 					<dd>礼品定制</dd>
 					<dd>企业定制</dd>
 					<dd>INABA甄选</dd>
-					<dd>全部产品</dd>
+					<dd><a href="productList">全部产品</a></dd>
 				</dl>
 			</div>
 			<div class='right'>

@@ -3,9 +3,9 @@
 	<div class="page_content_wrap">
 		<div class="left">
 			<ul id="top_left_menu">
-				<li>设为首页</li>
-				<li>收藏本站</li>
-				<li>网站地图</li>
+<!-- 				<li>设为首页</li>
+				<li>加入收藏</li>
+				<li>网站地图</li> -->
 			</ul>
 		</div>
 		<div class="right">			

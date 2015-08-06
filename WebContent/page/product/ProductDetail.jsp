@@ -5,28 +5,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="keywords" content="${content.metaKeywords}" >
-<meta name="description" content="${content.metaDescription}">
 <jsp:include page="../include/Head.jsp"></jsp:include>
-<link type="text/css" rel="stylesheet" href="${SITE_TEMPLATE_URL}/res/css/product/ProductDetail.css">
+<link type="text/css" rel="stylesheet" href="/inaba/css/product/ProductDetail.css">
+<cms:metaInfo siteCode="inaba" channelPath="productList" contentID="${product.contentID }" />
 </head>
 <body>
 	<jsp:include page="../include/Top.jsp"></jsp:include>
-	<div class="body_wrap">		
-    	<cms:channelMenu siteCode="inaba" channelPath="productList" />
-	</div>
-	<div class="body_wrap block shadow">
-	    <div class="content_wrap">
+	<div class="page_content_wrap">
+		<cms:channelMenu siteCode="inaba" channelPath="productList" />
+		<div class="content_wrap">
 			<div class="content align_center">
-				<h1>${content.contentTitle }</h1>
+				<h1>${product.contentTitle }</h1>
 				<hr class="hr"></hr>
 				<hr size="2" width="100%">
 			</div>
-			<div class="content">					
-				${content.contentBody }
-			</div>
+			<div class="content">${product.contentBody }</div>
 		</div>
 	</div>
-   <jsp:include page="../include/Footer.jsp"></jsp:include>	
+	<jsp:include page="../include/Footer.jsp"></jsp:include>
 </body>
 </html>
